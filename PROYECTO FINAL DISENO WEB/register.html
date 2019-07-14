@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="register.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+    body{background-image: url('assets/imagenes/tubos.jpg');}
+    </style>
+    
+</head>
+<body class="">     
+    
+        <div class="header-blue">            
+                <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                    <div class="container"><a class="navbar-brand" href="index.html">TEST LAB QA</a><button data-toggle="collapse"
+                            class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                                navigation</span><span class="navbar-toggler-icon"></span></button>                                
+                    </div>
+                </nav>
+            </div>        
+        </div>
+
+    <div class="registry-container">
+        <form action="">
+           <div class="container-register-form">
+               <div>
+                   <h1 class="registryheader">Formulario de registro</h1>
+               </div>
+               <div>
+                   <p>Llene todos los campos a continuacion</p>
+               </div>
+               <hr>
+               <div>
+                    <label for="user" ><b> Nombre de usuario: </b></label>
+                    <input type="text" name="user" id="user" required>
+               </div>
+                <div>
+                    <label for="First_name"><b>Nombres: </b></label>
+                    <input type="text" name="First_name" id="First_name" required>
+                </div>
+                <div>
+                    <label for="Last_name"><b>Apellidos: </b></label>
+                    <input type="text" name="Last_name" id="Last_name" required>
+                </div>
+                <div class="form-gender">
+                    <label for="sex"><b>Genero: </b></label>
+                                   
+                        <input type="radio" name="gender"  value="Male" class="gender" id="generoM">
+                         <label for="generoM">Masculino</label>
+                        <input type="radio" name="gender"  value="Female" class="gender" id="generoF">
+                        <label for="generoF">Femenino</label> 
+                </div>
+                <div>
+                    <label for="email"><b>Correo electronico: </b></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="birthdate"><b>Fecha de nacimiento: </b></label>
+                    <input type="date" name="birthdate" id="birthdate">
+                </div>
+                <div class="form-group">
+                        <label for="sel1">Pais:</label>
+                        <select class="form-control" id="sel1">
+                          <option>Seleccionar pais</option>
+                          <option>Republica Dominicana</option>
+                          <option>Estados Unidos</option>
+                          <option>Mexico</option>
+                          <option>Panama</option>
+                          <option>Peru</option>
+                          <option>Chile</option>
+                          <option>Costa Rica</option>
+                          <option>España</option>
+                          <option>Reino Unido</option>
+                          <option>Rusia</option>
+                          <option>Francia</option>
+                          <option>Paris</option>
+                          <option>Venezuela</option>
+                          <option>Colombia</option>
+                          <option>Cuba</option>
+                        </select>
+                      </div>
+                <div>
+                    <label for="password"><b>Contraseña: </b></label>
+                    <input type="password" name="password" id="password" required> 
+                    <label for="confirmpassword"><b>Confirmacion de Contraseña: </b></label>       
+                    <input type="password" name="confirmpassword" id="confirmpassword" required>
+                </div>   
+                <div>
+                    <button type="submit" class="btn btn-primary">Enviar datos</button>
+                </div>  
+                <div>
+                    <input type="reset" class="btn btn-primary" value="Limpiar campos">
+                </div>
+                <div>
+                    <p class="haveaccount"> Ya tienes una cuenta? <a href="login.html"><i> Inicia sesion </i></a>.</p>
+                </div>
+            </div>
+        </form> 
+    </div>
+
+</body>
+</html>

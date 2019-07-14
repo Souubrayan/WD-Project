@@ -7,7 +7,7 @@
 
 @media (min-width:768px) {
   .header-blue {
-    padding-bottom: 120px;
+    padding-bottom: 10px;
   }
 }
 
@@ -189,13 +189,13 @@
 .header-blue .iphone-mockup img.device {
   width: 150%;
   height: auto;
-  margin-top: 55%;
+  margin-top: 40%;
   border-radius: 2%;
 }
 
 .header-blue .iphone-mockup .screen {
   position: absolute;
-  width: 88%;
+  width: 80%;
   height: 77%;
   top: 12%;
   border-radius: 2px;
@@ -218,3 +218,39 @@
   opacity: 0.2;
   
 }
+
+.pass-reco-container{
+  padding: 20px 0 0 20px;
+}
+
+.pass-reco-header-form{ padding-top: 20px;}
+
+.login-container{
+  padding: 20px 0 0 20px;
+  background-color: white;
+  margin: 0 auto 0 auto;
+  margin-top: 2%;
+  width: 400px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 50px 50px 50px;
+  opacity: 0.9;
+  border: groove;
+}
+
+.container-register-form{
+  background-color: white;
+ margin: 0 auto 0 auto;
+  width: 500px;
+  text-align: center;
+  padding: 50px 100px 50px 100px;
+  opacity: 0.9;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.pass-reco-header-form input {width: 20%;}
+.login-container a{color: black;}
+.container-register-form a{color: black;}
+
+
