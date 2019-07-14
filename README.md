@@ -1,2 +1,2 @@
 # WD-Project
-Proyecto final de dise;o web I
+Proyecto final de diseño web I (asignatura universitaria)
