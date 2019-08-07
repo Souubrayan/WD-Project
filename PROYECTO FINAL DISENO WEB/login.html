@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Inicio de sesion</title>
   <meta charset="utf-8">
@@ -8,46 +9,72 @@
   <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
   <link rel="stylesheet" href="assets/css/Header-Blue.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+    integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
   <style>
-  body{background-color: whitesmoke; background-image: url('assets/imagenes/tubos.jpg');}
+    body {
+      background-color: whitesmoke;
+      background-image: url('assets/imagenes/tubos.jpg');
+    }
   </style>
 </head>
+
 <body>
 
-        <div class="header-blue">            
-                <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-                    <div class="container"><a class="navbar-brand" href="index.html">TEST LAB QA</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
-                                navigation</span><span class="navbar-toggler-icon"></span></button>                                
-                    </div>
-                </nav>
-        </div>
+  <div class="header-blue">
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+      <div class="container"><a class="navbar-brand" href="index.html"><i class='fas fa-home'
+            style='font-size:30px'></i> TEST LAB QA </a><button data-toggle="collapse" class="navbar-toggler"
+          data-target="#navcol-1"><span class="sr-only">Toggle
+            navigation</span><span class="navbar-toggler-icon"></span></button>
+      </div>
+    </nav>
+  </div>
 
-<div class="login-container">
-  <h2>Inicio de sesion</h2>
-  <form action="#">
-    <div class="form-group">
-      <label for="email">Correo:</label>
-      <input type="email" class="form-control" id="email" placeholder="Correo electronico" name="email">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Contraseña:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd">
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember"> Recuerdame
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Ingresar</button><br><br>
-    <a href="resetpassword.html" target="_blank">¿Olvidaste la Contraseña?</a><br>
-    <p class="haveaccount"> ¿Aun no tienes cuenta? <a href="register.html"><i> registrate </i></a>.</p>
-  </form>
-</div>
+  <div class="login-container">
+    <h2>Inicio de sesion</h2>
+    <form onsubmit="return login();">
+      <div class="form-group">
+        <label for="user">Usuario:</label>
+        <input type="text" class="form-control" id="user" placeholder="Correo electronico" name="user" required>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Contraseña:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="&#128274; Contraseña" name="pswd" required>
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Recuerdame
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button><br><br>
+      <a href="resetpassword.html" target="_blank">¿Olvidaste la Contraseña?</a><br>
+      <p class="haveaccount"> ¿Aun no tienes cuenta? <a href="register.html"><i> registrate </i></a>.</p>
+    </form>
+  </div>
 
+  <div class="footer">
+    <footer>
+      <p> © 2019 TEST LAB QA. Certificaciones confiables y no se que mas. </p>
+    </footer>
+  </div>
+  <script>    
+    function login(){
+      let userInput = document.getElementById('user');
+      console.log('submitted');
+        if(userInput.value == 'admin'){
+            window.location = "/adminview.html"
+        } else {
+          window.location = "/userview.html"
+        }
+        return false;
+    }
+  </script>
 </body>
+
+
 </html>

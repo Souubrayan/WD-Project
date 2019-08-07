@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,37 +16,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <style>
-    body{background-image: url('assets/imagenes/tubos.jpg');}
+        body {
+            background-image: url('assets/imagenes/tubos.jpg');
+        }
     </style>
-    
+
 </head>
-<body class="">     
-    
-        <div class="header-blue">            
-                <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-                    <div class="container"><a class="navbar-brand" href="index.html">TEST LAB QA</a><button data-toggle="collapse"
-                            class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
-                                navigation</span><span class="navbar-toggler-icon"></span></button>                                
-                    </div>
-                </nav>
-            </div>        
-        </div>
+
+<body class="">
+
+    <div class="header-blue">
+        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+            <div class="container"><a class="navbar-brand" href="index.html"> <i class='fas fa-home'
+                        style='font-size:30px'></i> TEST LAB QA </a><button data-toggle="collapse"
+                    class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                        navigation</span><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </nav>
+    </div>
+    </div>
 
     <div class="registry-container">
         <form action="">
-           <div class="container-register-form">
-               <div>
-                   <h1 class="registryheader">Formulario de registro</h1>
-               </div>
-               <div>
-                   <p>Llene todos los campos a continuacion</p>
-               </div>
-               <hr>
-               <div>
-                    <label for="user" ><b> Nombre de usuario: </b></label>
+            <div class="container-register-form">
+                <div>
+                    <h1 class="registryheader">Formulario de registro</h1>
+                </div>
+                <div>
+                    <p>Llene todos los campos a continuacion</p>
+                </div>
+                <hr>
+                <div>
+                    <label for="user"><b> Nombre de usuario: </b></label>
                     <input type="text" name="user" id="user" required>
-               </div>
+                </div>
                 <div>
                     <label for="First_name"><b>Nombres: </b></label>
                     <input type="text" name="First_name" id="First_name" required>
@@ -56,11 +63,11 @@
                 </div>
                 <div class="form-gender">
                     <label for="sex"><b>Genero: </b></label>
-                                   
-                        <input type="radio" name="gender"  value="Male" class="gender" id="generoM">
-                         <label for="generoM">Masculino</label>
-                        <input type="radio" name="gender"  value="Female" class="gender" id="generoF">
-                        <label for="generoF">Femenino</label> 
+
+                    <input type="radio" name="gender" value="Male" class="gender" id="generoM">
+                    <label for="generoM">Masculino</label>
+                    <input type="radio" name="gender" value="Female" class="gender" id="generoF">
+                    <label for="generoF">Femenino</label>
                 </div>
                 <div>
                     <label for="email"><b>Correo electronico: </b></label>
@@ -71,35 +78,35 @@
                     <input type="date" name="birthdate" id="birthdate">
                 </div>
                 <div class="form-group">
-                        <label for="sel1">Pais:</label>
-                        <select class="form-control" id="sel1">
-                          <option>Seleccionar pais</option>
-                          <option>Republica Dominicana</option>
-                          <option>Estados Unidos</option>
-                          <option>Mexico</option>
-                          <option>Panama</option>
-                          <option>Peru</option>
-                          <option>Chile</option>
-                          <option>Costa Rica</option>
-                          <option>España</option>
-                          <option>Reino Unido</option>
-                          <option>Rusia</option>
-                          <option>Francia</option>
-                          <option>Paris</option>
-                          <option>Venezuela</option>
-                          <option>Colombia</option>
-                          <option>Cuba</option>
-                        </select>
-                      </div>
+                    <label for="sel1">Pais:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Seleccionar pais</option>
+                        <option>Republica Dominicana</option>
+                        <option>Estados Unidos</option>
+                        <option>Mexico</option>
+                        <option>Panama</option>
+                        <option>Peru</option>
+                        <option>Chile</option>
+                        <option>Costa Rica</option>
+                        <option>España</option>
+                        <option>Reino Unido</option>
+                        <option>Rusia</option>
+                        <option>Francia</option>
+                        <option>Paris</option>
+                        <option>Venezuela</option>
+                        <option>Colombia</option>
+                        <option>Cuba</option>
+                    </select>
+                </div>
                 <div>
                     <label for="password"><b>Contraseña: </b></label>
-                    <input type="password" name="password" id="password" required> 
-                    <label for="confirmpassword"><b>Confirmacion de Contraseña: </b></label>       
+                    <input type="password" name="password" id="password" required>
+                    <label for="confirmpassword"><b>Confirmacion de Contraseña: </b></label>
                     <input type="password" name="confirmpassword" id="confirmpassword" required>
-                </div>   
+                </div>
                 <div>
                     <button type="submit" class="btn btn-primary">Enviar datos</button>
-                </div>  
+                </div>
                 <div>
                     <input type="reset" class="btn btn-primary" value="Limpiar campos">
                 </div>
@@ -107,8 +114,13 @@
                     <p class="haveaccount"> Ya tienes una cuenta? <a href="login.html"><i> Inicia sesion </i></a>.</p>
                 </div>
             </div>
-        </form> 
+        </form>
     </div>
 
+    <div class="footer">
+        <footer>
+            <p> © 2019 TEST LAB QA. Certificaciones confiables y no se que mas. </p>
+        </footer>
 </body>
+
 </html>

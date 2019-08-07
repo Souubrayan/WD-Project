@@ -8,6 +8,7 @@
 @media (min-width:768px) {
   .header-blue {
     padding-bottom: 10px;
+    
   }
 }
 
@@ -19,12 +20,14 @@
   border-radius: 0;
   box-shadow: none;
   border: none;
+  
 }
 
 @media (min-width:768px) {
   .header-blue .navbar {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    
   }
 }
 
@@ -40,12 +43,14 @@
 .header-blue .navbar .navbar-collapse {
   border-top: 1px solid rgba(255,255,255,0.3);
   margin-top: .5rem;
+  
 }
 
 @media (min-width:768px) {
   .header-blue .navbar .navbar-collapse {
     border-color: transparent;
     margin: 0;
+    
   }
 }
 
@@ -53,6 +58,7 @@
   color: #d9d9d9;
   margin-right: .5rem;
   text-decoration: none;
+  
 }
 
 .header-blue .navbar .navbar-collapse span .login:hover {
@@ -171,7 +177,7 @@
 .header-blue .hero p {
   color: rgba(255,255,255,0.8);
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-weight: 300;
 }
 
@@ -187,9 +193,9 @@
 }
 
 .header-blue .iphone-mockup img.device {
-  width: 150%;
+  width: 100%;
   height: auto;
-  margin-top: 40%;
+  margin-top: 30%;
   border-radius: 2%;
 }
 
@@ -221,6 +227,9 @@
 
 .pass-reco-container{
   padding: 20px 0 0 20px;
+  margin: 25px 0 250px 0;
+  align-content: center;
+  float: center;
 }
 
 .pass-reco-header-form{ padding-top: 20px;}
@@ -228,8 +237,7 @@
 .login-container{
   padding: 20px 0 0 20px;
   background-color: white;
-  margin: 0 auto 0 auto;
-  margin-top: 2%;
+  margin: 2% auto 75px auto;
   width: 400px;
   text-align: center;
   border-radius: 5px;
@@ -240,7 +248,7 @@
 
 .container-register-form{
   background-color: white;
- margin: 0 auto 0 auto;
+ margin: 2% auto 75px auto;
   width: 500px;
   text-align: center;
   padding: 50px 100px 50px 100px;
@@ -252,5 +260,74 @@
 .pass-reco-header-form input {width: 20%;}
 .login-container a{color: black;}
 .container-register-form a{color: black;}
+.container-register-form input{border: groove;}
+
+footer{
+  position: relative;
+   width: 100%;
+   text-align: center;
+   background: linear-gradient(135deg, #172a74, #21a9af);
+  background-color: #184e8e;
+  padding: 15px 0 15px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  /*margin-top: 40%;*/
+  }
+
+  footer p {color: white;}
+
+  .container-mainhtml{
+    margin: 25px 150px 25px 150px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .presentation-main{margin-bottom: 10%;}
+
+  /* ---------------------css for side menu------------------------------------------*/ 
+
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 
+  #loquequiero{width: 25%;}
+  #parrafo-seleccione{font-size: 14pt;}

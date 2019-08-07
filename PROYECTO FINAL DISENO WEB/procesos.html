@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <title>TEST LAB QA</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header-blue">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div>
+
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="adminview.html">Pagina Principal</a>
+                        <a href="procesos.html">Procesos</a>
+                        <a href="#">Usuarios</a>
+                        <a href="servicios.html">Servicios</a>
+                    </div>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    <script>
+                        function openNav() {
+                            document.getElementById("mySidenav").style.width = "250px";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("mySidenav").style.width = "0";
+                        }
+                    </script>
+                </div>
+                <div class="container"><a class="navbar-brand" href="index.html"> TEST LAB QA </a><button
+                        data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
+                            class="sr-only">Toggle
+                            navigation</span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" href="#">Mensajes</a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
+                                    href="#">Servicios </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" role="presentation" href="#">Aparta tu cita</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Reportes</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Consulta de resultados</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Realizar reclamo</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Solicitud de informacion de
+                                        pruebas</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Solicitud de rectificacion</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Solicitud de
+                                        reconsideracion</a></div>
+                            </li>
+                        </ul>
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input
+                                    class="form-control search-field" type="search" id="search-field" name="search">
+                            </div>
+                        </form>
+                        <span class="navbar-text">
+                            <li class="dropdown nav-item">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
+                                    href="#">Administrador</a>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" role="presentation" href="#">Solicitudes</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Privacidad</a>
+                                    <a class="dropdown-item" role="presentation" href="#">Ajustes</a>
+                                    <a class="dropdown-item" role="presentation" href="index.html">cerrar sesion</a>
+                                </div>
+                            </li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container mt-3">
+        <h2>Procesos de verificacion de ensayos</h2>
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Activos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Pendientes de aprobacion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">Pausados</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu3">Lotes generados</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <h3>En proceso</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. </p>
+                <div class="container">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>
+                                    <div class="modal-progress-container">
+
+                                        <!-- Button to Open the Modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#myModal">
+                                            Ver progreso
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Progreso</h4>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <h2> </h2>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" style="width:70%">70%</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Para aprobar proceso</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+
+                <div class="container">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                            <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                    class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td><button type="button" class="btn btn-success">Aprobar</button><button type="button"
+                                        class="btn btn-danger">Pausar</button></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Expedientes pausados</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam.</p>
+
+                <div class="container">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td> <button type="button" class="btn btn-success">Reconsiderar</button><button
+                                        type="button" class="btn btn-danger">Cancelar proceso</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="menu3" class="container tab-pane fade"><br>
+                <h3>Lotes</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+
+                <div class="container">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                                <th>No.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-JBARBILLAL</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-ADMINISTRATOR</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>QA-GENERADO AUTOMATICAMENTE NO.001463-ADMINISTRATOR</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <footer>
+            <p> © 2019 TEST LAB QA. Certificaciones confiables y no se que mas. </p>
+        </footer>
+    </div>
+</body>
+
+</html>
