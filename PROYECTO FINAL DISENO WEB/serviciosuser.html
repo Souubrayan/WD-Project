@@ -44,7 +44,7 @@
                         <a href="adminview.html">Pagina Principal</a>
                         <a href="procesos.html">Procesos</a>
                         <a href="#">Usuarios</a>
-                        <a href="servicios.html">Certificacion</a>
+                        <a href="serviciosuser.html">Registrar prueba</a>
                     </div>
                     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
                     <script>
@@ -106,41 +106,73 @@
 
         <div>
             <div class="services-head">
-                <h1>Ventanilla de aprobacion de certificados</h1>
+                <h1>Formulario de registro:</h1>
                 
 
                 <div class="container">
-                        <h2>Hover Rows</h2>
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>Firstname</th>
-                              <th>Lastname</th>
-                              <th>Email</th>
-                              <th>Acciones</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>John</td>
-                              <td>Doe</td>
-                              <td>john@example.com</td>
-                              <td><button class="btn"><i class="fa fa-download"></i> Descargar informe</button>
-                                <button type="button" class="btn btn-success" ><a href="https://image.freepik.com/vector-gratis/elegante-diseno-plantilla-certificado-diploma_1017-17253.jpg" style="color: white;">Certificar</a> </button></td>
-                            </tr>
-                            <tr>
-                              <td>Mary</td>
-                              <td>Moe</td>
-                              <td>mary@example.com</td>
-                            </tr>
-                            <tr>
-                              <td>July</td>
-                              <td>Dooley</td>
-                              <td>july@example.com</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                
+                        <h2></h2>
+                        
+                        <form action="#">
+                          <div class="form-group">
+                            <label for="usr">Nombre:</label>
+                            <input type="text" class="form-control" id="usr" name="username">
+                          </div>
+                          <div class="form-group">
+                            <label for="pwd">Correo electronico:</label>
+                            <input type="email" class="form-control" id="pwd" name="password">
+                          </div>
+                          <div class="form-group">
+                                <label for="date">Fecha:</label>
+                                <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                        <div>
+                                <p>Modalidad: <br></p>
+                           </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                              
+                                <input type="radio" class="custom-control-input" id="customRadio1" name="example1">                               
+                                <label class="custom-control-label" for="customRadio1">Nuevo Certificacion</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio2" name="example2">
+                                <label class="custom-control-label" for="customRadio2">Re-certificar</label>
+                              </div>
+
+                              
+                        <div style="margin: 3%;">
+                                    <label for="formform">Tipo de prueba:</label>
+                                
+                                  
+                                        <select name="cars" class="custom-select">
+                                          <option selected>Custom Select Menu</option>
+                                          <option value="volvo">Volvo</option>
+                                          <option value="fiat">Fiat</option>
+                                          <option value="audi">Audi</option>
+                                          <option value="volvo">Volvo</option>
+                                          <option value="fiat">Fiat</option>
+                                          <option value="audi">Audi</option>
+                                          <option value="volvo">Volvo</option>
+                                          <option value="fiat">Fiat</option>
+                                          <option value="audi">Audi</option>
+                                        </select>
+                                        <br>
+                                        <label for="" style="margin-top: 3%;">informacion adicional:</label>
+
+                                        <div class="form-group">
+                                                <label for="comment">Comentario:</label>
+                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        </div>
+
+                                        <label for="">Adjuntar carta de solicitud detallada y anexos en archivo comprimido:</label>
+                                        <input type="file" class="form-control-file border">
+
+                                    
+                              </div>
+                          <button type="submit" class="btn btn-primary">Completar solicitud</button>
+                        </form>
+                    
+                </div>
 
             </div>
          </div> 
